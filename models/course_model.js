@@ -1,5 +1,5 @@
 import mongoose from "mongoose";
-import Section from "./section_model.js";
+
 
 const courseSchema = mongoose.Schema({
     title: {
