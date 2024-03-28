@@ -14,7 +14,26 @@ const courseSchema = mongoose.Schema({
         type: String,
         required: true,
     },
-    sections: [Section.schema],
+    sections: [
+        {
+            title: {
+                type: String,
+                required: true
+            },
+            lessons: [
+                {
+                    title: {
+                        type: String,
+                        required: true
+                    },
+                    content: {
+                        type: String,
+                        required: true
+                    }
+                }
+            ],
+        }
+    ],
     price: {
         type: Number,
         required: true,
